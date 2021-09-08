@@ -1,12 +1,22 @@
 import RPi.GPIO as GPIO
+from time import sleep
 
-from config import settings
+
+from config import Config
 
 
 class Light:
 
     def __init__(self):
-        GPIO.setmode(GPIO.BCM)
+        pass
+
+    def test(self):
+        GPIO.setmode(Config.gpio_mode)
+        GPIO.setup(Config.pin_bulb, GPIO.OUT)
+        GPIO.output(Config.pin_bulb, GPIO.LOW)
+        sleep(3)
+        GPIO.output(Config.pin_bulb, GPIO.LOW)
+        GPIO.cleanup()
 
     def on(self):
         try:
@@ -30,4 +40,4 @@ class Light:
 
 if __name__ == '__main__':
     light = Light()
-    light.on()
+    light.test()
