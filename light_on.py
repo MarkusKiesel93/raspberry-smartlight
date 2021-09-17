@@ -6,7 +6,7 @@ from config import config
 try:
     GPIO.setmode(config.gpio_mode)
     GPIO.setup(config.pin_bulb, GPIO.OUT)
-    GPIO.output(config.pin_bulb, GPIO.LOW)
+    GPIO.output(config.pin_bulb, GPIO.HIGH)
 except Exception as ex:
     print("turn on failed!")
     print(ex)
