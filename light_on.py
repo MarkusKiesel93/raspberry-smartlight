@@ -1,12 +1,12 @@
 import RPi.GPIO as GPIO
-from config import Config
+from config import config
 
 # todo change pritn to logging
 
 try:
-    GPIO.setmode(Config.gpio_mode)
-    GPIO.setup(Config.pin_bulb, GPIO.OUT)
-    GPIO.output(Config.pin_bulb, GPIO.LOW)
+    GPIO.setmode(config.gpio_mode)
+    GPIO.setup(config.pin_bulb, GPIO.OUT)
+    GPIO.output(config.pin_bulb, GPIO.LOW)
 except Exception as ex:
     print("turn on failed!")
     print(ex)

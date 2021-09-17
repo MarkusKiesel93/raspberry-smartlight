@@ -14,3 +14,5 @@ class Config(BaseSettings):
 
     gpio_mode = GPIO.BCM
     pin_bulb: int = 4
+
+config = Config

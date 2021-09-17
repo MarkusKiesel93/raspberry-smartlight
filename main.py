@@ -1,16 +1,16 @@
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 
-from config import Config
+from config import config
 
 
 app = FastAPI(title=f'API - Smartlight')
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=Config.cors_allowed_origins,
-    allow_methods=Config.cors_allowed_methods,
-    allow_headers=Config.cors_allowed_headers,
+    allow_origins=config.cors_allowed_origins,
+    allow_methods=config.cors_allowed_methods,
+    allow_headers=config.cors_allowed_headers,
 )
 
 
