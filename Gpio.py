@@ -10,7 +10,7 @@ class Gpio:
         try:
             GPIO.setmode(config.gpio_mode)
             GPIO.setup(pin_number, GPIO.OUT)
-            GPIO.output(pin_number, GPIO.HIGH)
+            GPIO.output(pin_number, GPIO.LOW)
         except Exception as ex:
             print("turn on failed!")
             print(ex)
@@ -20,7 +20,7 @@ class Gpio:
             GPIO.setmode(config.gpio_mode)
             GPIO.setwarnings(False)
             GPIO.setup(pin_number, GPIO.OUT)
-            GPIO.output(pin_number, GPIO.LOW)
+            GPIO.output(pin_number, GPIO.HIGH)
         except Exception as ex:
             print("turn off failed!")
             print(ex)
