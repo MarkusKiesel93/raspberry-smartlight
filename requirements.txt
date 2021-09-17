@@ -1,0 +1,2 @@
+pydantic==1.8.2
+rontab==0.23.0

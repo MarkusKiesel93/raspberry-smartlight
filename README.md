@@ -1,3 +1,7 @@
-# raspberry-smartlight
+# Raspberry Smart Light (or not so smart)
 
-The pin layout can be checked with the command pinout
+## Install
+pip3 install -r ./requirements.txt
+
+## Find out pin layout in case of changes
+use command: pinout
