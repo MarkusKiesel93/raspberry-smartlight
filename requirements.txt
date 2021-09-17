@@ -1,2 +1,2 @@
 pydantic==1.8.2
-crontab==0.23.0
+python-crontab==2.5.1
