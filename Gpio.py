@@ -25,5 +25,3 @@ class Gpio:
         except Exception as ex:
             print("turn off failed!")
             print(ex)
-        finally:
-            GPIO.cleanup()
