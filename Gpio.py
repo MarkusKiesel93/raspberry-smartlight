@@ -6,16 +6,17 @@ from config import config
 
 
 class Gpio:
-    def on(self, pin_number):
+    def low(self, pin_number):
         try:
             GPIO.setmode(config.gpio_mode)
+            GPIO.setwarnings(False)
             GPIO.setup(pin_number, GPIO.OUT)
             GPIO.output(pin_number, GPIO.LOW)
         except Exception as ex:
             print("turn on failed!")
             print(ex)
 
-    def off(self, pin_number):
+    def high(self, pin_number):
         try:
             GPIO.setmode(config.gpio_mode)
             GPIO.setwarnings(False)

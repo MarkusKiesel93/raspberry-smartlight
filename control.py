@@ -6,17 +6,17 @@ gpio = Gpio()
 
 
 def light_on():
-    gpio.on(config.pin_bulb)
+    gpio.low(config.pin_bulb)
 
 
 def light_off():
-    gpio.off(config.pin_bulb)
+    gpio.high(config.pin_bulb)
     Sheduler().reset()
 
 
 def ambient_light_on():
-    gpio.on(config.pin_ambient)
+    gpio.high(config.pin_ambient)
 
 
 def ambient_light_off():
-    gpio.off(config.pin_ambient)
+    gpio.low(config.pin_ambient)
