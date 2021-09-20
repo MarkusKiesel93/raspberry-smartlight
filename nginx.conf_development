@@ -1,0 +1,11 @@
+server {
+    include mime.types;
+
+    listen 8000;
+
+    charset utf-8;
+
+    location /static/ {
+    	alias /files/static/;
+    }
+}
