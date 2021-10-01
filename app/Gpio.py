@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-from config import config
+from app.config import config
 
 # todo change pritn to logging
 

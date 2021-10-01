@@ -1,6 +1,6 @@
 from crontab import CronTab
 
-from config import config
+from app.config import config
 
 
 class Sheduler:

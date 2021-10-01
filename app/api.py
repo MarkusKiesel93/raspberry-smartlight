@@ -1,9 +1,9 @@
 from fastapi import FastAPI, status, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from config import config
-import control
-from sheduler import Sheduler
+from app.config import config
+import app.control as control
+from app.sheduler import Sheduler
 
 
 app = FastAPI(title='API - Smartlight')

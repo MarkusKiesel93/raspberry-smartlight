@@ -1,6 +1,6 @@
 from Gpio import Gpio
-from sheduler import Sheduler
-from config import config
+from app.sheduler import Sheduler
+from app.config import config
 
 gpio = Gpio()
 
