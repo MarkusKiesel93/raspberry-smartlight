@@ -4,8 +4,9 @@ After=network.target
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/smart_light
-ExecStart=/home/pi/smart_light/start
+Group=pi
+WorkingDirectory=/home/pi/smart_light/
+ExecStart=./start
 
 [Install]
 WantedBy=multi-user.target
