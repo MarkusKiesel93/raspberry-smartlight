@@ -11,9 +11,9 @@ sudo ln -s /etc/nginx/sites-available/smart_light /etc/nginx/sites-enabled/
 sudo /etc/init.d/nginx start (or restart: sudo systemctl restart nginx.service)
 
 ## Smart Light Api:
-sudo cp ./setup/smart_light_api /etc/init.d/
-sudo chmod 755 smart_light_api
-sudo update-rc.d smart_light_api defaults
+sudo cp setup/smart_light.service /etc/systemd/system/
+sudo systemctl start smart_light.service
+get status: systemctl status smart_light.service
 
 ## Set coorect time zone:
 sudo timedatectl set-timezone Europe/Vienna
