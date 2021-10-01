@@ -1,4 +1,4 @@
-from Gpio import Gpio
+from app.gpio import Gpio
 from app.sheduler import Sheduler
 from app.config import config
 
