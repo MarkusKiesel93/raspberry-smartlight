@@ -7,7 +7,7 @@ User=pi
 Group=pi
 Environment="PATH=/home/pi/.local/bin"
 WorkingDirectory=/home/pi/smart_light/
-ExecStart=./start
+ExecStart=/home/pi/smart_light/start
 
 [Install]
 WantedBy=multi-user.target
