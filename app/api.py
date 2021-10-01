@@ -1,8 +1,8 @@
 from fastapi import FastAPI, status, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
+from app import control
 from app.config import config
-import app.control as control
 from app.sheduler import Sheduler
 
 
