@@ -8,6 +8,8 @@ from app.sheduler import Sheduler
 
 app = FastAPI(title='API - Smartlight')
 
+## todo: add responses
+
 
 app.add_middleware(
     CORSMiddleware,
