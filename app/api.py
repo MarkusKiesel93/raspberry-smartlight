@@ -39,7 +39,7 @@ async def ambient_light_off():
 
 @app.get('/light/{hour}/{minute}', status_code=status.HTTP_200_OK)
 async def wakeup_light(hour: int, minute: int):
-    if hour < 0 or hour > 12 or minute < 0 or minute > 60:
+    if hour < 0 or hour > 24 or minute < 0 or minute > 60:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail='Not a correct time.'
