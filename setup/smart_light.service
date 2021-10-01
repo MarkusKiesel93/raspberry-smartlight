@@ -7,7 +7,7 @@ User=pi
 Group=pi
 Environment="PATH=/home/pi/.local/bin"
 WorkingDirectory=/home/pi/smart_light/
-ExecStart=/home/pi/smart_light/start
+ExecStart=gunicorn -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --workers 4 app.api:app
 
 [Install]
 WantedBy=multi-user.target
