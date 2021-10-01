@@ -1,0 +1,29 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          Smart Light API
+# Required-Start:    NGINX
+# Short-Description: Starts & Stops My Smart Light API
+# Description:       Starts & Stops My Smart Light API
+### END INIT INFO
+ 
+case "$1" in
+    start)
+        echo "Starte Smart Light API"
+        /home/pi/smart_light/start
+        ;;
+ 
+    stop)
+        echo "Stoppe Smart Light API"
+        # todo: how to stop ?
+        ;;
+ 
+    restart)
+        echo "Restarte Smart Light API"
+        # todo: how to restart ?
+        ;;
+ *)
+ echo "(start|stop|restart)"
+ ;;
+esac
+ 
+exit 0
