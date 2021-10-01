@@ -10,7 +10,7 @@ class Config(BaseSettings):
 
     sheduler_user: str = 'pi'
     sheduler_comment: str = 'smartlight'
-    sheduler_command: str = f'python3 {(Path(__file__).parent / "light_on.py").resolve()} &'
+    sheduler_command: str = f'python3 {(Path(__file__).parent.parent / "light_on.py").resolve()} &'
 
     gpio_mode = GPIO.BCM
     pin_bulb: int = 4
