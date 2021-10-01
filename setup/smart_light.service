@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn instance to serve smart_light
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/smart_light
+ExecStart=/home/pi/smart_light/start
+
+[Install]
+WantedBy=multi-user.target

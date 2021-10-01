@@ -5,9 +5,10 @@ pip3 install -r ./requirements.txt
 
 ## Nginx:
 sudo apt install nginx
-sudo rm /etc/nginx/conf.d/*
-sudo cp ./setup/nginx.conf /etc/nginx/conf.d/
-sudo /etc/init.d/nginx start
+sudo cp ./setup/nginx_site /etc/nginx/sites-available/smart_light
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/smart_light /etc/nginx/sites-enabled/
+sudo /etc/init.d/nginx start (or restart: sudo systemctl restart nginx.service)
 
 ## Smart Light Api:
 sudo cp ./setup/smart_light_api /etc/init.d/
