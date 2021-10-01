@@ -12,6 +12,7 @@ sudo /etc/init.d/nginx start (or restart: sudo systemctl restart nginx.service)
 
 ## Smart Light Api:
 sudo cp setup/smart_light.service /etc/systemd/system/
+sudo systemctl enable smart_light.service
 sudo systemctl start smart_light.service
 get status: systemctl status smart_light.service
 
